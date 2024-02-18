@@ -1,6 +1,6 @@
 function inserePlacar(usuario, ppm, acertos, erros) {
   var placar = $('.placar').find('tbody');
-  var usuario = 'Elias';
+  var usuario = 'User';
   var palavrasMinuto = ppm
   var linha = $("<tr>" +
     "<td>" + usuario + "</td>" +
@@ -51,11 +51,11 @@ function sincronizaPlacar() {
   var dados = {
     placar: placar
   }
-  $.post("http://localhost:3000/placar", dados);
+  $.post("https://typing-challenge-theta.vercel.app/JQuery/TypingChallenge/public/db.json", dados);
 }
 
 function atualizaPlacar() {
-  $.get("http://localhost:3000/placar",function(data){
+  $.get("https://typing-challenge-theta.vercel.app/JQuery/TypingChallenge/public/db.json",function(data){
     $(data).each(function(){
       inserePlacar(this.usuario, this.ppm, this.acertos, this.erros)
     })
