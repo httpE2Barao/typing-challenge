@@ -68,7 +68,7 @@ function inicializadorCronometro() {
 function finalizaJogo() {
   campo.attr('disabled', true);
   campo.css('background-color', 'lightgray');
-  inserePlacar('Elias', $(".contador_palavras").text(), acertos, erros);
+  inserePlacar('User', $(".contador_palavras").text(), acertos, erros);
   scrollPlacar();
   sincronizaPlacar();
   countdownActive = false;
